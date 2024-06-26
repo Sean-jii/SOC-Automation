@@ -106,6 +106,7 @@ Inside the Wazuh dashboard.
 - A rule needs to be created
 - While creating a customer rule, I inserted this into the bottom of the xml file:
 
+```
   <rule id="100002" level="15">
     <if_group>sysmon_event1</if_group>
     <field name="win.eventdata.originalFileName" type="pcre2">(?i)mimikatz\.exe</field>
@@ -116,6 +117,8 @@ Inside the Wazuh dashboard.
   </rule>
 
 </group>
+
+```
 
 -Regardless of if the filename for Mimikatz was changed, the alert will still show up in wazuh since the original filename for Mimikatz was used to setup the alert. 
 
