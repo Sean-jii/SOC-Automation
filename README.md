@@ -106,7 +106,7 @@ Inside the Wazuh dashboard.
 - A rule needs to be created
 - While creating a customer rule, I inserted this into the bottom of the xml file:
 
-   <rule id="100002" level="15">
+          <rule id="100002" level="15">
     <if_group>sysmon_event1</if_group>
     <field name="win.eventdata.originalFileName" type="pcre2">(?i)mimikatz\.exe</field>
     <description>Mimikatz Usage Detected</description>
